@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+body{
+    background-color: rgb(18, 16, 11);
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    }
+
+
+.header{
+    background-color:rgb(18, 16, 11);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6.25rem;
+    padding: .3125rem 10%;
+}
+
+.header .logo{
+    cursor: pointer;
+}
+
+.header .logo img{
+    height: 3.125rem;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.header .logo img:hover{
+    transform: scale(1.2);
+}
+
+.header .nav-links{
+    list-style: none;
+}
+
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;    
+}
+
+.header .nav-links li:hover{
+    transform: scale(1.1);
+}
+
+.header .nav-links a{
+    font-size:medium;
+    color: #eceff1;
+    text-decoration: none;   
+    
+}
+
+.header .nav-links li a:hover{
+    border: 1px solid white ;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    
+}
+
+.header .btn button{
+    font-weight: 700;
+    color: #1b3039;
+    padding: .5625rem 1.5625rem;
+    background: #eceff1;
+    border: none;
+    border-radius: 3.125rem;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover{
+    background-color: rgb(205, 148, 25);
+    color: #f2f0edd1;
+    transform: scale(1.1);
+}
+.material-symbols-outlined:hover{
+    cursor: pointer;
+    color: rgb(205, 148, 25);
+}
+/* main */
+
+.article{
+        width: auto;
+        height: 100vh;
+        background-image: url(./backgroud/cafe_imagen\ inicio.jpg);
+        background-size: cover;
+        background-attachment:local;
+        background-position:center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 1.25rem;
+        margin: 1.25rem;
+}
+article h1 {
+    font-size: 4rem;
+    font-family: 'Roboto', sans-serif;
+    
+}
+@media screen and (max-width: 51.25rem){
+    article h1 {
+        font-size: 3rem;
+        
+    }
+}
+@media screen and (max-width: 50rem){
+    article h1 {
+        font-size: 1.5rem;
+        
+    }
+
+}
+
+.main .btn button{
+    font-weight: 700;
+    color: #1b3039;
+    padding: .7625rem 2.5625rem;
+    background: #eceff1;
+    border: none;
+    border-radius: 3.125rem;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.main .btn button:hover{
+    background-color: rgb(205, 148, 25);
+    color: #f2f0edd1;
+    transform: scale(1.1);
+}
+
+/*footer */
+.footer{
+    height: 20.25rem;
+    width: auto;
+}
+.titulo-footer{
+    display: flex;
+    justify-content:center
+}
+.titulo-footer h1{
+    font-size:3.125rem;
+    font-family: 'Roboto', sans-serif;
+    
+}
+.section-footer{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: auto;
+    height: 20rem;
+    
+}
+.section-footer ul li {
+    list-style: none;
+    margin-top: .1875rem;
+    padding: 0 1.25rem;
+}
+.section-footer .encabezado-lista{
+    color: rgb(205, 148, 25);
+    font-weight: bold;
+}
+.section-footer ul li a{
+    text-decoration: none;
+    color: white;
+}
+.section-footer ul li a:hover{
+    color: blueviolet;
+}
+@media screen and (max-width: 51.25rem){
+    .section-footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items:center;
+        width: auto;
+        height: 20rem;
+        margin-right: 1.875rem;}
+        
+    }
+@media screen and (max-width: 50rem){
+    .section-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items:center;
+        width: auto;
+        height: 20rem;
+        
+    }
+
+}
+/*Chefs main*/
+
+
+
+/*MENU */
+.main-menu{
+    background-color: rgba(171, 125, 28, 0.656);
+    width: auto;
+    height: 100%;
+}
+.titulo-menu{
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid white;
+    border-top: none;
+    border-left: none;  
+}
+
+.container-menu{
+    width: auto;
+    max-width: 106.25rem;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.container-menu .menu{
+    width: 20.625rem;
+    height: 26.875rem;
+    border-radius: .5rem;
+    margin: 1.25rem;
+    text-align: center;
+    background-color:rgb(18, 16, 11);
+}
+
+.container-menu .menu:hover{
+    background-color: #1b1800aa;
+}
+
+.container-menu .menu img{
+    width: 20.625rem;
+    height: 13.75rem;
+}
+
+
+.container-menu .menu h4{
+    font-weight: 600;
+}
+
+.container-menu .menu p{
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.menu .btn button{
+    font-weight: 700;
+    color: #1b3039;
+    padding: .7625rem 2.5625rem;
+    background: #eceff1;
+    border: none;
+    border-radius: 3.125rem;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.menu  .btn button:hover{
+    background-color: rgb(205, 148, 25);
+    color: #f2f0edd1;
+    transform: scale(1.1);
+}
