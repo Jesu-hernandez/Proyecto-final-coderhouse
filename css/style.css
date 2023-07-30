@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
 body{
-    background-color: rgb(18, 16, 11);
+    background-color:rgb(27,27,26);
     margin: 0;
     padding: 0;
     font-family: 'Nunito', sans-serif;
@@ -9,7 +9,7 @@ body{
 
 
 .header{
-    background-color:rgb(18, 16, 11);
+    background-color:rgb(27,27,26);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -79,7 +79,7 @@ body{
     cursor: pointer;
     color: rgb(205, 148, 25);
 }
-/* main */
+/* main inicio */
 
 .article{
         width: auto;
@@ -192,8 +192,70 @@ article h1 {
 
 }
 /*Chefs main*/
+.main-carta{
+    background-color: rgba(171, 125, 28, 0.656);
+    margin: 0;
+}
+.container-carta{
+	width: 100%;
+	display: flex;
+	max-width: 1100px;
+	margin: auto;
+}
+.title-carta{
+	width: 100%;
+	max-width: 1080px;
+	margin: auto;
+	padding: 20px;
+	margin-top: 20px;
+	text-align: center;
+	color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+.carta{
+	width: 100%;
+	margin: 20px;
+	border-radius: 6px;
+	overflow: hidden;
+	background:#000000;
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+	transition: all 400ms ease-out;
+	cursor: default;
+}
+.carta:hover{
+	box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+	transform: translateY(-3%);
+}
+.carta img{
+	width: 100%;
+	height: 300px;
+}
+.carta .contenido-carta{
+	padding: 15px;
+	text-align: center;
+}
+.carta .contenido-carta h3{
+	margin-bottom: 15px;
+	color: #faf2f2;
+}
+.carta .contenido-carta p{
+	line-height: 1.8;
+	color: #fefefe;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
 
-
+@media only screen and (min-width:320px) and (max-width:768px){
+	.container-carta{
+		flex-wrap: wrap;
+	}
+	.carta{
+		margin: 15px;
+	}
+    .title-carta{
+        text-align: left;
+    }
+}
 
 /*MENU */
 .main-menu{
@@ -205,9 +267,6 @@ article h1 {
     display: flex;
     justify-content: center;
     font-family: 'Roboto', sans-serif;
-    border: 1px solid white;
-    border-top: none;
-    border-left: none;  
 }
 
 .container-menu{
@@ -226,11 +285,13 @@ article h1 {
     border-radius: .5rem;
     margin: 1.25rem;
     text-align: center;
-    background-color:rgb(18, 16, 11);
+    background-color:rgb(0, 0, 0);
+    transition: all 0.3s;
 }
 
 .container-menu .menu:hover{
-    background-color: #1b1800aa;
+    background-color: #000000aa;
+    transform: scale(0.90);
 }
 
 .container-menu .menu img{
@@ -263,4 +324,102 @@ article h1 {
     background-color: rgb(205, 148, 25);
     color: #f2f0edd1;
     transform: scale(1.1);
+    
+    
+    
+    
+}
+/* GALERIA */
+.title-galeria{
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+.galeria{
+    background-color: rgba(171, 125, 28, 0.656);
+    width: auto;
+    height: 100%;
+}
+.container-galeria{
+    width: auto;
+    max-width: 106.25rem;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    ;
+}
+.container-galeria .imagen img {
+    width: 20rem;
+    height: auto;
+    margin: 3px;
+    border: solid black 3px;
+}
+.title-descriccion{
+    text-align: center;
+        
+}
+.parrafos-galeria{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.parrafos-galeria .parrafo{
+    border: solid black 3px;
+}
+.parrafo{
+    width: 700px;
+    background-color: #000000;
+    padding: 30px;
+    margin: 20px;
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+    .container-galeria{
+        display: flex;
+        justify-content: space-around;
+    }
+    .parrafo{
+        width: 300px;
+    }
+}
+
+/* Delivery */
+.delivery{
+    background-color: rgba(171, 125, 28, 0.656);
+    width: auto;
+    height: 100%;
+}
+.title-delivery{ 
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container-delivery{
+    width: auto;
+    max-width: 106.25rem;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    ;
+}
+
+.img-delivery img{
+    width: 400px;
+    height: 604px;
+    border: solid black 4px;
+    margin: 1px;
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+    .container-delivery{
+        display: flex;
+        justify-content: space-around;
+    }
+    .img-delivery img{
+        width: 360px;
+        height: auto;
+    }
 }
