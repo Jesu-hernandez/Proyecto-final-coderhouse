@@ -1,0 +1,69 @@
+.main-menu{
+    background-color: $background-main;
+    width: auto;
+    height: 100%;
+}
+.titulo-menu{
+    @include title-centrado;
+}
+
+.container-menu{
+    width: auto;
+    max-width: 106.25rem;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.container-menu .menu{
+    width: 20.625rem;
+    height: 26.875rem;
+    border-radius: .5rem;
+    margin: 1.25rem;
+    text-align: center;
+    background-color:$color-terciario;
+    transition: all 0.3s;
+}
+
+.container-menu .menu:hover{
+    background-color: #000000aa;
+    transform: scale(0.90);
+}
+
+.container-menu .menu img{
+    width: 20.625rem;
+    height: 13.75rem;
+}
+
+
+.container-menu .menu h4{
+    font-weight: 600;
+}
+
+.container-menu .menu p{
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.menu .btn button{
+    font-weight: 700;
+    color: #1b3039;
+    padding: .7625rem 2.5625rem;
+    background: #eceff1;
+    border: none;
+    border-radius: 3.125rem;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.menu  .btn button:hover{
+    background-color: $color-secudario;
+    color: #f2f0edd1;
+    transform: scale(1.1);
+    
+    
+    
+    
+}

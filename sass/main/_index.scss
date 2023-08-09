@@ -1,0 +1,48 @@
+.article{
+    width: auto;
+    height: 100vh;
+    background-image: url(./backgroud/cafe_imagen\ inicio.jpg);
+    background-size: cover;
+    background-attachment:local;
+    background-position:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.25rem;
+    margin: 1.25rem;
+}
+article h1 {
+font-size: 4rem;
+font-family: 'Roboto', sans-serif;
+
+}
+@media screen and (max-width: 51.25rem){
+article h1 {
+    font-size: 3rem;
+    
+}
+}
+@media screen and (max-width: 50rem){
+article h1 {
+    font-size: 1.5rem;
+    
+}
+
+}
+
+.main .btn button{
+font-weight: 700;
+color: #1b3039;
+padding: .7625rem 2.5625rem;
+background: #eceff1;
+border: none;
+border-radius: 3.125rem;
+cursor: pointer;
+transition: all 0.3s ease 0s;
+}
+.main .btn button:hover{
+background-color: $color-secudario;
+color: #f2f0edd1;
+transform: scale(1.1);
+}

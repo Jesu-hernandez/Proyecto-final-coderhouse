@@ -1,0 +1,35 @@
+.delivery{
+    background-color:$background-main;
+    width: auto;
+    height: 100%;
+}
+.title-delivery{ 
+    @include title-centrado;
+}
+
+.container-delivery{
+    width: auto;
+    max-width: 106.25rem;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    ;
+}
+
+.img-delivery img{
+    width: 400px;
+    height: 604px;
+    border: solid black 4px;
+    margin: 1px;
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+    .container-delivery{
+        display: flex;
+        justify-content: space-around;
+    }
+    .img-delivery img{
+        width: 360px;
+        height: auto;
+    }
+}
