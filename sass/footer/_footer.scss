@@ -35,7 +35,7 @@
 .section-footer ul li a:hover{
     color: blueviolet;
 }
-@media screen and (max-width: 51.25rem){
+@media screen and (max-width: 800rem){
     .section-footer{
         display: flex;
         flex-direction: row;
@@ -45,12 +45,15 @@
         height: 20rem;
         margin-right: 1.875rem;}
     }
-@media screen and (max-width: 50rem){
+@media screen and (max-width:400px){
     .section-footer{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items:center;
+        align-items:flex-start;
         width: auto;
         height: 20rem;}
+        .section-footer small{
+        text-align: center;
+        }
     }
