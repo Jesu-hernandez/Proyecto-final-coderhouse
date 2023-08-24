@@ -1,5 +1,5 @@
 .article{
-    width: auto;
+    width: 100%;
     height: 100vh;
     background-image: url(./backgroud/cafe_imagen\ inicio.jpg);
     background-size: cover;
@@ -26,6 +26,7 @@ article h1 {
 @media screen and (max-width: 50rem){
 article h1 {
     font-size: 1.5rem;
+    margin-left: 30px;
     
 }
 

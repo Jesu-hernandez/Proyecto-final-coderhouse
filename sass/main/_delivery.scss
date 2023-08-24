@@ -1,43 +1,120 @@
-.delivery{
-    background-color:$background-main;
-    width: auto;
-    height: 100%;
-}
-.title-delivery{ 
-    @include title-centrado;
-}
-
-.container-delivery{
-    width: auto;
-    max-width: 106.25rem;
-    height: 100%;
+.main{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center
-    ;
+    justify-content: center;
+    align-items: center;
 }
-.container-delivery h3{
-    text-align: center;
-}
-.container-delivery h3 a {
-    text-decoration: none;
-    color: white;
-
-}
-.container-delivery h3 a:hover {
+.flip-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    color: rgb(80, 9, 148);
-    transition: cubic-bezier();
 }
 
-@media(min-with:400px){
-    .delivery{
-        width: 100%;
-        height: auto;
-    }
-    .img-delivery{
-        width: 300px;
-        height: auto;
-    }
+.flip-container {
+    background-color: transparent;
+    width:700px;
+    height: 700px;
+    border: 1px solid #ccc;
+    perspective: 1000px; 
+
 }
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.front p{
+    font-size:large;
+}
+.flip-container:hover .card {
+    transform: rotateY(180deg);
+}
+.front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+}
+.back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.front {
+    background-color: $background-main;
+    color: #fff;
+    
+}
+.back {
+    background-color: #463607;
+    color: rgb(248, 244, 244);
+    transform: rotateY(180deg);
+    border: white solid 1px;
+}
+.label {
+    display: block;
+    margin-bottom: 5px;
+    
+}
+
+.input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: white solid 1.4px;
+    color: white;
+    background-color:  #463607;
+}
+.input:hover{
+    border: none;
+    border-bottom: white solid 1.4px;
+    
+}
+input:focus{
+    border: none;
+    border-bottom: white solid 1.4px;
+}
+
+.submit {
+    font-weight: 700;
+    color: #1b3039;
+    padding: .5625rem 1.5625rem;
+    background: #eceff1;
+    border: none;
+    border-radius: 3.125rem;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+
+.submit:hover{
+    background-color: $color-secudario;
+    color: #f2f0edd1;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 400px){
+    .flip-container {
+        background-color: transparent;
+        width:370px;
+        height:500px;
+        border: 1px solid #ccc;
+        perspective: 400px; 
+    }
+    .front h2 { 
+        font-size: 60px;
+    }
+    
+    }

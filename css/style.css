@@ -69,51 +69,129 @@
   color: rgb(205, 148, 25);
 }
 
-.delivery {
-  background-color: rgba(171, 125, 28, 0.656);
-  width: auto;
-  height: 100%;
-}
-
-.title-delivery {
+.main {
   display: flex;
   justify-content: center;
-  font-family: "Roboto", sans-serif;
-}
-
-.container-delivery {
-  width: auto;
-  max-width: 106.25rem;
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
   align-items: center;
 }
 
-.container-delivery h3 {
-  text-align: center;
-}
-
-.container-delivery h3 a {
-  text-decoration: none;
-  color: white;
-}
-
-.container-delivery h3 a:hover {
+.flip-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  color: rgb(80, 9, 148);
-  transition: cubic-bezier();
 }
 
-@media (min-with: 400px) {
-  .delivery {
-    width: 100%;
-    height: auto;
+.flip-container {
+  background-color: transparent;
+  width: 700px;
+  height: 700px;
+  border: 1px solid #ccc;
+  perspective: 1000px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.front p {
+  font-size: large;
+}
+
+.flip-container:hover .card {
+  transform: rotateY(180deg);
+}
+
+.front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+}
+
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.front {
+  background-color: rgba(171, 125, 28, 0.656);
+  color: #fff;
+}
+
+.back {
+  background-color: #463607;
+  color: rgb(248, 244, 244);
+  transform: rotateY(180deg);
+  border: white solid 1px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: white solid 1.4px;
+  color: white;
+  background-color: #463607;
+}
+
+.input:hover {
+  border: none;
+  border-bottom: white solid 1.4px;
+}
+
+input:focus {
+  border: none;
+  border-bottom: white solid 1.4px;
+}
+
+.submit {
+  font-weight: 700;
+  color: #1b3039;
+  padding: 0.5625rem 1.5625rem;
+  background: #eceff1;
+  border: none;
+  border-radius: 3.125rem;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.submit:hover {
+  background-color: rgb(205, 148, 25);
+  color: rgba(242, 240, 237, 0.8196078431);
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 400px) {
+  .flip-container {
+    background-color: transparent;
+    width: 370px;
+    height: 500px;
+    border: 1px solid #ccc;
+    perspective: 400px;
   }
-  .img-delivery {
-    width: 300px;
-    height: auto;
+  .front h2 {
+    font-size: 60px;
   }
 }
 .title-galeria {
@@ -176,7 +254,7 @@
   }
 }
 .article {
-  width: auto;
+  width: 100%;
   height: 100vh;
   background-image: url(./backgroud/cafe_imagen\ inicio.jpg);
   background-size: cover;
@@ -203,6 +281,7 @@ article h1 {
 @media screen and (max-width: 50rem) {
   article h1 {
     font-size: 1.5rem;
+    margin-left: 30px;
   }
 }
 .main .btn button {
@@ -255,8 +334,9 @@ article h1 {
 }
 
 .container-menu .menu:hover {
-  background-color: rgba(0, 0, 0, 0.6666666667);
-  transform: scale(0.9);
+  transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
 }
 
 .container-menu .menu img {
@@ -321,8 +401,9 @@ article h1 {
 }
 
 .carta:hover {
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
-  transform: translateY(-3%);
+  transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
 }
 
 .carta img {
@@ -401,7 +482,7 @@ article h1 {
   color: blueviolet;
 }
 
-@media screen and (max-width: 800rem) {
+@media screen and (max-width: 800px) {
   .section-footer {
     display: flex;
     flex-direction: row;
